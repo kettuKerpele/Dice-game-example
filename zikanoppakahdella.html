@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles_noppa.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
+<title>Sikanoppa kahdella nopalla</title>
+</head>
+<body>
+
+<section>
+ <h1><span>&#9860;</span> Zikanoppa <span>&#9860; </span><span><button id="linkBtn" class="rollButton" onclick="page1()">Pelaa yhdellä</button></span></h1>
+</section>
+
+<br>
+
+<div class="dices">
+ <img id="one" src="C:\Users\cpu3\Desktop\Dices\noppa2.png"/>
+ <img id="two" src="C:\Users\cpu3\Desktop\Dices\noppa5.png"/>
+ <button class="rollButton" id="newGame" onclick="startNew()">Uusi peli</button>
+ <p id="diceNums"></p>
+</div>
+
+<div class="playerArea">
+  
+ <div class="players">
+  <p>Pelaaja 1</p>
+  <p id="pl1"></p>
+  <input type="text" id="player1Name" placeholder="nimesi.."></input>
+  <button class="sbmBtn" id="first" type"submit" onclick="addPlayer1(); checkArray1()">Ok</button>
+  <br><br>
+  <button class="passButton" id="pass1" onclick="stopAndpass1(); winnerIs()">Kerää pisteet</button>
+  <br><br>
+  <button class="rollButton" id="roll1" onclick="rollPlayer1(); winnerIs()">Heitä noppia</button>
+ </div>
+ 
+ <div class="players" style="width:300px;">
+  <p>Pelitilanne:</p>
+    <p style="font-size:14px;" id="name1info"></p>
+    <p style="font-size:12px;" id="roundScores1"></p>
+    <p style="font-size:12px;" id="scores1"></p>
+    <hr>
+    <p style="font-size:14px;" id="name2info"></p>
+    <p style="font-size:12px;" id="roundScores2"></p>
+    <p style="font-size:12px;" id="scores2"></p>
+ </div>
+
+ <div class="players">
+  <p>Pelaaja 2</p>
+  <p id="pl2"></p>
+  <input type="text" id="player2Name" placeholder="nimesi.."></input>
+  <button class="sbmBtn" id="second" type"submit" onclick="addPlayer2(); checkArray2();">Ok</button>
+  <br><br>
+  <button class="passButton" id="pass2" onclick="stopAndpass2(); winnerIs();">Kerää pisteet</button>
+  <br><br>
+  <button class="rollButton" id="roll2" onclick="rollPlayer2(); winnerIs();">Heitä noppia</button>
+ </div>
+
+</div>
+
+<script src="js_nopat_kaksi.js"></script>
+
+</body>
+</html>
